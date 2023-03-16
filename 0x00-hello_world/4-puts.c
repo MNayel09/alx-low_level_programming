@@ -8,6 +8,6 @@ int main(void)
 {
 	char Mystr[] = "Programming is like building a m	ultilingual puzzle";
 
-	puts("Mystr");
+	puts(Mystr);
 	return (0);
 }
