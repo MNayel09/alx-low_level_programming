@@ -6,6 +6,21 @@
  */
 int main(void)
 {
-	printf("_putchar\n");
+	int c;
+
+	getchar();
+	c = 'l';
+	putchar(c);
+	c = 'e';
+	putchar(c);
+	c = 't';
+	putchar(c);
+	c = 't';
+	putchar(c);
+	c = 'e';
+	putchar(c);
+	c = 'r';
+	putchar(c);
+	putchar('\n');
 	return (0);
 }
