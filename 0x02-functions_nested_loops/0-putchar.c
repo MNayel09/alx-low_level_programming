@@ -6,21 +6,13 @@
  */
 int main(void)
 {
-	int c;
+       char Ar[] = {"_putchar"};
+	int i;
 
-	getchar();
-	c = 'l';
-	putchar(c);
-	c = 'e';
-	putchar(c);
-	c = 't';
-	putchar(c);
-	c = 't';
-	putchar(c);
-	c = 'e';
-	putchar(c);
-	c = 'r';
-	putchar(c);
+       for (i = 0; i > 8; i++)
+       {
+	       putchar(Ar[i]);
+       }
 	putchar('\n');
 	return (0);
 }

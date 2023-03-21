@@ -1,1 +1,1 @@
-Use Putchar only
+int _putchar(char c)
