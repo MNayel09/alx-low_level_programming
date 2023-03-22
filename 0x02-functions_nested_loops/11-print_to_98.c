@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include "main.h"
 /**
  * print_to_98 - print to 98
@@ -7,10 +8,13 @@
  */
 void print_to_98(int n)
 {
-	while (n <= 98)
+	while (n != 98)
 	{
-		_putchar(n);
-		n++;
+		printf("%d, ", n);
+		if (n > 98)
+			n--;
+		else
+			n++;
 	}
-	_putchar('\n');
+	printf("98\n");
 }
