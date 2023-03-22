@@ -9,12 +9,14 @@ int print_last_digit(int j)
 {
 	int i = j % 10;
 
-	for (i = 0; i < 2; i++)
+	if (j >= 0)
 	{
-		if (j >= 0)
-		return (i);
+		for (i = 0; i < 2; i++)
+			{
+				return (i);
+			}
+	}
 		else if (j < 0)
 		return (i);
-	}
 	return (i);
 }
