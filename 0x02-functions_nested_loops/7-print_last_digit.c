@@ -16,5 +16,5 @@ int print_last_digit(int j)
 		else if (j < 0)
 		return (i);
 	}
-	return (0);
+	return (i);
 }
