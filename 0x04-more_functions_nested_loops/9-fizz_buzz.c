@@ -27,12 +27,12 @@ int main(void)
 		{
 			printf("%d", a);
 		}
-		a++;
 		if (a != 100)
 		{
 			printf(" ");
 		}
+		a++;
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
