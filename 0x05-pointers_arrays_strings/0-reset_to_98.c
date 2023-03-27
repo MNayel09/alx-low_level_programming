@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * reset_to_98 - update pointer to 98
- * @*n: the argument pointer
+ * @n: the argument pointer
  *
  * Return: =0
  */
