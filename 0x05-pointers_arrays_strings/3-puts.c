@@ -2,7 +2,7 @@
 /**
  * _puts - print an array of strings
  * @str: array arg
- * 
+ *
  * Return: =0
  */
 void _puts(char *str)
