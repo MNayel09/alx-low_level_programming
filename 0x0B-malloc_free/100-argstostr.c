@@ -8,7 +8,7 @@
  *
  * Return: =0
  */
-char *argstostr(int ac, int av)
+char *argstostr(int ac, int **av)
 {
 	int ch = 0, i = 0, j = 0, k = 0;
 	char *s;
@@ -44,6 +44,7 @@ char *argstostr(int ac, int av)
 
 		j = 0;
 		k++;
+		i++;
 	}
 
 	k++;
