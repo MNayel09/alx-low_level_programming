@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main prints all arguments it recieves
+ * main - prints all arguments it recieves
  * @argc: arg count
  * @argv: arg vector
  *
