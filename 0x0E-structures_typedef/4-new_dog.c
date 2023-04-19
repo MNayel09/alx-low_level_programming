@@ -1,8 +1,7 @@
 #include "dog.h"
 #include<stdlib.h>
 /**
- * dog_t - creates a new dog
- * @new_dog: pointer to dog_t
+ * new_dog - pointer to dog_t
  * @name: name of new dog
  * @age: age of new dog
  * @owner: owner of new dog
