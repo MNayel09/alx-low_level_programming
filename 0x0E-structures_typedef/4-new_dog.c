@@ -17,18 +17,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	length_name = 0;
 	while (name[length_name] != '\0')
 		length_name++;
-
 	length_owner = 0;
 	while (owner[length_owner] != '\0')
 		length_owner++;
-
 	new_dog = malloc(sizeof(struct dog));
 	if (new_dog == NULL)
 	{
 		free(new_dog);
 		return (NULL);
 	}
-
 	new_dog->name = malloc(length_name + 1);
 	if (new_dog->name == NULL)
 	{
@@ -36,7 +33,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog->name);
 		return (NULL);
 	}
-
 	new_dog->owner = malloc(length_owner + 1);
 	if (new_dog->owner == NULL)
 	{
@@ -45,14 +41,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog->owner);
 		return (NULL);
 	}
-
 	for (i = 0; i <= length_name; i++)
 		new_dog->name[i] = name[i];
-
 	for (i = 0; i <= length_owner; i++)
 		new_dog->owner[i] = owner[i];
-
 	new_dog->age = age;
-
 	return (new_dog);
 }
