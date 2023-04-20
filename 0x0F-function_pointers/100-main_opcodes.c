@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, n;
 
 	if (argc != 2)
 	{
@@ -17,16 +17,17 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	if (atoi(argv[1] < 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (i = 0; i < atoi(argv[1]); i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%02hhx", *((char *)(main + i));
-		if (i < atoi(argv[1]) - 1)
+		printf("%02hhx", *((char *)main + i));
+		if (i < n - 1)
 			printf(" ");
 		else
 			printf("\n");
