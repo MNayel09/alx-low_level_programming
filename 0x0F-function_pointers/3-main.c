@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*f)(int, int);
+	int (*s)(int, int);
 
 	if (argc != 4)
 	{
@@ -16,14 +16,14 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	f = get_op_func(argv[2]);
+	s = get_op_func(argv[2]);
 
-	if (!f)
+	if (!s)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", s(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
