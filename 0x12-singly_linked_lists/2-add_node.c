@@ -2,6 +2,21 @@
 #include <string.h>
 #include <stdlib.h>
 /**
+  * string_length - finds the length of a string.
+  * Return: length of c.
+  * @pointer: pointer.
+  */
+int string_length(const char *pointer)
+{
+	int c = 0;
+
+	while (*(pointer + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
+}
+/**
  * add_node - Adds a new node at the beginning of a list_t list.
  * @head: A pointer to a pointer to the head of the linked list.
  * @str: The string to be added to the new node.
@@ -21,6 +36,7 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
+	new_node->len = string_length(str);
 	new_node->next = *head;
 	*head = new_node;
 	return (*head);
