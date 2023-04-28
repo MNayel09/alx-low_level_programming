@@ -12,7 +12,8 @@ int _strlen(const char *str)
 	int len;
 
 	for (len = 0; str[len] != '\0'; len++)
-	return (len);
+		;
+		return (len);
 }
 /**
  * add_node_end - adds a new node to the end of list_t list.
@@ -37,11 +38,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	new_node->len = _strlen(str);
 	new_node->next = NULL;
-	last = *head_ref;
-	if (*head_ref == NULL)
+	last = *head;
+	if (*head == NULL)
 	{
-		*head_ref = new_node;
-		return;
+		*head = new_node;
+		return (new_node);
 	}
 	while (last->next != NULL)
 		last = last->next;
