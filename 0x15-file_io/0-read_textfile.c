@@ -19,12 +19,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return 0;
 
-	bytes_read = read(fd, buffer, sizeof(letters));
+	bytes_read = read(fd, buffer, sizeof(buffer));
 	if (bytes_read == -1)
 	{
 		close(fd);
 		return 0;
 	}
+	if (letters < (size_t)bytes_read)
+		bytes_read = letters;
 	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 	if (bytes_written == -1 || (size_t)bytes_written != (size_t)bytes_read)
 	{
