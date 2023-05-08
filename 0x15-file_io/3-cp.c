@@ -49,7 +49,7 @@ void copy_file(const char *file_from, const char *file_to)
 	if (fd_to == -1)
 	{
 		close(fd_from);
-		error_exit("Error: Can't write to file", file_to, 99);
+		error_exit("Error: Can't write to ", file_to, 99);
 	}
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
@@ -59,7 +59,7 @@ void copy_file(const char *file_from, const char *file_to)
 		{
 			close(fd_from);
 			close(fd_to);
-			error_exit("Error: Can't write to file", file_to, 99);
+			error_exit("Error: Can't write to ", file_to, 99);
 		}
 	}
 	if (bytes_read == -1)
