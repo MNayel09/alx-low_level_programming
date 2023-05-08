@@ -40,7 +40,7 @@ void copy_file(const char *file_from, const char *file_to)
 	int fd_from, fd_to;
 	ssize_t bytes_read, bytes_written;
 	char buffer[BUFFER_SIZE];
-	mode_t file_permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	mode_t file_permissions = 0664;
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
